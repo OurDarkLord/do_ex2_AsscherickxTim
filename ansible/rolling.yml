@@ -5,6 +5,9 @@
   sudo: yes
   gather_facts: no
 
+  vars_files:
+    - vault.yml
+
   tasks:
 
   - name: install git
@@ -17,6 +20,9 @@
     # https://github.com/OurDarkLord/site-example-ansible
     app_version: release-0.01
   serial: 1
+
+  vars_files:
+    - vault.yml
 
   pre_tasks:
 
@@ -59,9 +65,12 @@
     delegate_to: "{{ item }}"
     with_items: groups.bl
 
-# lb
-- hosts: lb
-  sudo: yes  
+# bl
+- hosts: bl
+  sudo: yes 
+
+  vars_files:
+    - vault.yml 
 
   tasks:
 

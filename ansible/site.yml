@@ -5,6 +5,9 @@
   sudo: yes
   gather_facts: no
 
+  vars_files:
+    - vault.yml
+
   tasks:
 
   - name: install git
@@ -13,6 +16,9 @@
 # web
 - hosts: web
   sudo: yes
+
+  vars_files:
+    - vault.yml
 
   tasks:
 
@@ -38,6 +44,9 @@
 # balace loader
 - hosts: bl
   sudo: yes  
+
+  vars_files:
+    - vault.yml
 
   tasks:
 

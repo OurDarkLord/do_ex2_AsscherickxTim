@@ -1,0 +1,2 @@
+cat >> vault <<EOL
+vagrant

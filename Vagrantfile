@@ -29,6 +29,7 @@ Vagrant.configure(2) do |config|
         mgr.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh", disabled: true
         mgr.vm.network "forwarded_port", guest: 22, host: 6666, auto_correct: true
         mgr.vm.provision "shell", path: "hosts.sh"
+        mgr.vm.provision "shell", path: "addVault.sh"
         mgr.vm.provision "shell", path: "mgr.sh"
 
     end

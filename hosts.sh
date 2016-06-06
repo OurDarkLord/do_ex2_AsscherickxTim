@@ -8,8 +8,5 @@ cat >> /etc/hosts <<EOL
 192.168.2.3  www1
 192.168.2.4  www2
 
-ansible_connection=ssh 
-ansible_ssh_user=vagrant 
-ansible_ssh_pass=vagrant
 
 EOL
