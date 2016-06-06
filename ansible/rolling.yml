@@ -60,7 +60,7 @@
     with_items: groups.bl
 
 # lb
-- hosts: lb
+- hosts: bl
   sudo: yes  
 
   tasks:
