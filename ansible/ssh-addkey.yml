@@ -4,8 +4,7 @@
   gather_facts: no
   remote_user: vagrant
 
-  vars_files:
-    - vault.yml
+
 
   tasks:
 

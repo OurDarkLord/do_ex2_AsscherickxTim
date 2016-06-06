@@ -17,10 +17,10 @@ ssh-keyscan bl www1 www2 >> .ssh/known_hosts
 ssh-keygen -t rsa -b 2048 -N "" -f /home/vagrant/.ssh/id_rsa
 
 
+ansible-playbook /vagrant/ansible/ssh-addkey.yml 
+
+ansible-playbook /vagrant/ansible/site.yml  
+
+ansible-playbook /vagrant/ansible/rolling.yml 
 
 
-ansible-playbook /vagrant/ansible/ssh-addkey.yml --vault-password-file vault
-
-ansible-playbook /vagrant/ansible/site.yml --vault-password-file vault
-
-ansible-playbook /vagrant/ansible/rolling.yml --vault-password-file vault
