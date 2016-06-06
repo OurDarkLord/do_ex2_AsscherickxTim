@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
         mgr.vm.provision "shell", path: "hosts.sh"
         mgr.vm.provision "shell", path: "addVault.sh"
         mgr.vm.provision "shell", path: "mgr.sh"
-
+        mgr.vm.provision "shell",privileged: false, path: "runplaybooks.sh"
     end
 
 end
